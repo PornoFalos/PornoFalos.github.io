@@ -5,7 +5,7 @@
         <nav class="navbar navbar-expand-lg navbar-light p-4">
           <a class="navbar-brand" href="#">
             <img src="@/assets/logoCRM.gif" width="30" height="30" class="d-inline-block" alt="">
-              <span class="ml-3 text-logo">Ebalkin</span>
+              <span class="ml-3 text-logo">Ebalkin</span><span>ppppppp</span>
           </a>
           <div v-on:click="$emit('show-menu', show)" class="navbar-button text-center p-2">
             <i class="fas fa-align-justify"></i>
