@@ -7,6 +7,7 @@
             <img src="@/assets/logoCRM.gif" width="30" height="30" class="d-inline-block" alt="">
               <span class="ml-3 text-logo">Ebalkin</span><span>ppppppp</span>
               <p>TEST TEST TEST</p>
+              <button v-on:click="getInfoPorn"> Ckick get </button>
           </a>
           <div v-on:click="$emit('show-menu', show)" class="navbar-button text-center p-2">
             <i class="fas fa-align-justify"></i>
@@ -14,6 +15,8 @@
           </div>
 
         </nav>
+        <input v-model="user.city.country"></input>
+        <p>{{ user.city.country }}</p>
 
       </div>
     </div>
@@ -27,8 +30,37 @@ export default {
   name: 'HeaderNavBar',
   data() {
       return {
-        show: true
+        show: true,
+        data: null,
+        user: {
+          city: {
+            country: ""
+          }
+        }
       }
+  },
+
+  methods: {
+    getInfoPorn: function () {
+
+      // const pornhub = require('pornnhub');
+
+      // const url = 'https://www.pornhub.com/view_video.php?viewkey=ph56fc59c124c0c';
+      //
+      //  pornhub(url, 'views').then(res => {
+      //     console.log(res);
+      //
+      //  })
+
+    }
+  },
+  watch: {
+    user: {
+      handler(newValue) {
+        console.log( newValue );
+      },
+      deep: true
+    }
   }
 
 
