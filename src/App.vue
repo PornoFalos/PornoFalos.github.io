@@ -17,7 +17,7 @@
              </div>
 
              <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12 pl-0 offset-lg-1 offset-md-1 offset-sm-0">
-               <Home></Home>
+               <Home>SSSSSSSSSSSSSS</Home>
              </div>
            </div>
 
@@ -42,6 +42,8 @@
   import Home from "@/views/Home.vue";
   import Footer from "@/components/Footer/Footer.vue";
 
+  import { mapActions } from "vuex";
+
   export default {
     name: 'App',
     data() {
@@ -52,11 +54,18 @@
       }
     },
     methods: {
+      ...mapActions(["test"]),
+
       showMenu(value) {
         this.isActive = value;
 
       //  alert(this.isActive);
       }
+    },
+    async mounted() {
+
+      this.test();
+
     },
     components: {
       HeaderNavBar,
